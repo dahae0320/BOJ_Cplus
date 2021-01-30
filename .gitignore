@@ -42,4 +42,8 @@
 *.out
 *.app
 
+# 제외할 특정 파일
+Baekjoon_StepByStep/210107wkdalsrb.cpp
+Baekjoon_StepByStep/main.cpp
+
 # End of https://www.toptal.com/developers/gitignore/api/c++
