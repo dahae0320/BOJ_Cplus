@@ -26,3 +26,47 @@
 // 	}
 // 	cout << group_word << "\n";
 // }
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+static bool check (int *E, int u, int index);
+int main() {
+	int N, count;
+	cin >> N; count = N;
+	
+	for (int n = 0; n < N; n++) {
+		string str;
+		cin >> str;
+		int* used = new int[str.length()]; int used_i = 1;
+		
+		used[0] = str[0];
+		for (int i = 1; (unsigned)i < str.length(); i++) {
+			if (str[i] != str[i-1]) {
+				if( check(used, str[i], used_i) ) // 중복이 아닐 경우
+				{
+					used[used_i] = str[i];
+					used_i++;
+				} 
+				else 	// 중복일 경우 
+				{
+					count--;	// 그룹단어가 아니므로 count에서 하나를 줄인다.
+					break;		// 탐색 종료
+				}
+			}
+		}
+		
+	}
+	
+	cout << count << "\n";
+	return 0;
+}
+
+static bool check(int *E, int u, int index)
+{
+	for (int i = 0; i < index; i++) {
+		if ( E[i] == u ) return false;
+	}
+	return true;	// u is not exist in E (E에 없다. 중복이 아니다)
+}
