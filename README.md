@@ -1,5 +1,5 @@
-# baekjoon_백준 문제 풀이
-baekjoon online judge with C++<br>
+# Baekjoon Online Judge (BOJ)
+#### baekjoon online judge with C++<br>
 [2020.12 ~ ing]
 
 ### 사용한 언어
