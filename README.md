@@ -1,4 +1,4 @@
-# Baekjoon Online Judge
+# Baekjoon Online Judge (BOJ)
 #### baekjoon online judge with C++<br>
 [2020.12 ~ ing]
 
