@@ -13,7 +13,7 @@ int main() {
 }
 static int resident(int k, int n, int num[][14]) {
 	if ( k==0 ) return n;
-	num[k][n] = 0;
+	if ( num[k][n] ) return num[k][n];
 	for (int j = n; j > 0; j--) {
 		if ( num[k-1][j] ) {
 			num[k][n] += num[k-1][j];
